@@ -25,8 +25,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
         with:
-          repository: tripleo-ci/openstack-k8s-operators-ci
-          ref: run_kuttl_tests
+          repository: tripleo-ci/keystone-operator
 
       # Runs multiple commands using the runners shell.
       - name:
