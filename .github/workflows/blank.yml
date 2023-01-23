@@ -28,5 +28,5 @@ jobs:
       # Runs multiple commands using the runners shell.
       - name: Run kuttl
         run: |
-          wget -O /tmp/test/kubectl-kuttl https://github.com/kudobuilder/kuttl/releases/download/v0.9.0/kubectl-kuttl_0.9.0_linux_x86_64
+          wget -O /usr/local/bin https://github.com/kudobuilder/kuttl/releases/download/v0.9.0/kubectl-kuttl_0.9.0_linux_x86_64
           kubectl-kuttl --version
