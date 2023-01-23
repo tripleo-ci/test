@@ -28,5 +28,5 @@ jobs:
       # Runs multiple commands using the runners shell.
       - name: Run kuttl
         run: |
-          kubectl krew install kuttl
+          brew install kuttl-cli
           kubectl-kuttl --version
