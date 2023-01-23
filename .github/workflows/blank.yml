@@ -29,4 +29,5 @@ jobs:
       - name: Run kuttl
         run: |
           kubectl version
+          kubectl krew install kuttl
           kubectl-kuttl --version
