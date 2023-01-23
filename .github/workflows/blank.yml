@@ -33,7 +33,8 @@ jobs:
           ls 
           echo bin dir
           ls /usr/local/bin/
-          mv kubectl-kuttl_0.9.0_linux_x86_64 /usr/local/bin/kubectl-kuttl_0.9.0_linux_x86_64
+          chmod +x kubectl-kuttl_0.9.0_linux_x86_64
+          mv kubectl-kuttl_0.9.0_linux_x86_64 /usr/local/bin/kubectl-kuttl
           ls /usr/local/bin/
           /usr/local/bin/kubectl-kuttl --version
           kubectl-kuttl --version
