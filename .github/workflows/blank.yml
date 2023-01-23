@@ -24,8 +24,13 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
+        with:
+          repository: tripleo-ci/openstack-k8s-operators-ci
+          ref: run_kuttl_tests
 
       # Runs multiple commands using the runners shell.
-      - name: Run kuttl
+      - name:
         run: |
-          printf "My current shell - %s\n" "$SHELL"
+          echo ${{ github.workspace }}
+          ls -al ${{ github.workspace }}
+          pwd
