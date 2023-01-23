@@ -22,21 +22,9 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
-        with:
-          repository: tripleo-ci/openstack-k8s-operators-ci
-    
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
-        with:
-          repository: tripleo-ci/keystone-operator
 
       # Runs multiple commands using the runners shell.
       - name:
         run: |
-          echo ${{ github.workspace }}
-          ls -al ${{ github.workspace }}
-          ls -al $GITHUB_WORKSPACE
-          pwd
+          echo {{github.event.pull_request.head.repo.full_name}}
+          echo {{github.event.pull_request.head.sha}}
