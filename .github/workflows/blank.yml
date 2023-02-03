@@ -22,7 +22,12 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Setup Go
-        uses: actions/setup-go@v2
+      - uses: actions/checkout@v3
+      - name: Buildah Action
+        id: openstack-ansibleee-runner
+        uses: redhat-actions/buildah-build@v2
         with:
-          go-version: 1.19
+          image: openstack-ansibleee-runner
+          tags: ${{ env.latesttag }} ${{ github.sha }}
+          containerfiles: |
+            ./Dockerfile
